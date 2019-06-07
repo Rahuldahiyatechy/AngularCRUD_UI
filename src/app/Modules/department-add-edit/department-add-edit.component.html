@@ -1,0 +1,45 @@
+<p>
+  department-edit works!
+</p>
+
+
+
+
+
+
+  <div class="col-lg-3 col-md-4 no-left-padding">
+    <mat-form-field>
+      <mat-label>Name *</mat-label>
+      <input style="width:250px; height:50px;" matInput placeholder="Enter Department Name" [(ngModel)]="Department.name">
+
+    </mat-form-field>
+    <div class="col-lg-3 col-md-4 no-left-padding">
+     <mat-form-field>
+     <mat-label>Description *</mat-label>
+     <input style="width:250px; height:50px;" matInput placeholder="Enter Description" [(ngModel)]="Department.description">
+
+      </mat-form-field>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+<div class="row tfr-submit-botton-group">
+  <div class="">
+    <button [routerLink]="('/DepartmentList')" type="button" class="btn tfr-back-button">
+      <i class="fa fa-arrow-left"></i> Back
+    </button>
+  </div>
+
+  <div class="">
+    <button  type="button" class="btn tfr-submit-button" (click)="saveChanges()">
+      <i class="fa fa-save"></i>Save 
+    </button>
+  </div>
+</div>

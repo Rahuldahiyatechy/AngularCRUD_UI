@@ -1,0 +1,61 @@
+<p>
+  course-add-edit works!
+</p>
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-3 col-md-4 no-left-padding">
+  <mat-form-field>
+    <mat-label>Name *</mat-label>
+    <input style="width:250px; height:50px;" matInput placeholder="Enter Course Name" [(ngModel)]="Course.name">
+  </mat-form-field>
+</div>
+
+
+<div class="col-lg-3 col-md-4 no-left-padding">
+  <mat-form-field>
+    <mat-label>Description *</mat-label>
+    <input style="width:250px; height:50px;" matInput placeholder="Enter Description" [(ngModel)]="Course.description">
+  </mat-form-field>
+</div>
+
+
+
+<div class="col-lg-3 col-md-4 no-left-padding">
+  <mat-form-field style="height: 5em;">
+    <mat-label></mat-label>
+    <mat-select style="width:150px; height:50px;" placeholder="Slect your  Department " [(ngModel)]="Course.departmentId">
+      <mat-option *ngFor="let dpt of Department" [value]="dpt.id">
+        {{dpt.name}}<!--{{dpt.id}}{{dpt.description}}-->
+      </mat-option>
+    </mat-select>
+   <!--alert({{Course.departmentId}});-->
+  </mat-form-field>
+</div>
+
+
+
+
+
+
+<div class="row tfr-submit-botton-group">
+  <div class="">
+    <button [routerLink]="('/CourseList')" type="button" class="btn tfr-back-button">
+      <i class="fa fa-arrow-left"></i> Back
+    </button>
+  </div>
+
+  <div class="">
+    <button type="button" class="btn tfr-submit-button" (click)="saveChanges()">
+      <i class="fa fa-save"></i>Save
+    </button>
+  </div>
+</div>
+
